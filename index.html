@@ -11,6 +11,12 @@ html,body{height:100%;}
 h1{font-size:20px;line-height:1em;}
 table{width:100%;height:100%;border:0;}
 </style>
+<script>
+setInterval("show_time0.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);  
+</script>
+<script>
+tu(var m=10;var n=Math.floor(Math.random()*m+1)document.write ("<img src='/tu1/00"+n+".png' border=0 galleryimg=no>"););  
+</script>
 </head>
 <body>
 <table cellspacing="0" cellpadding="0">
@@ -19,7 +25,7 @@ table{width:100%;height:100%;border:0;}
 <table cellspacing="0" cellpadding="0">
 <tr>
 <td>
-<h1><div id="show_time0"></h1>
+<h1><div id="show_time0"><div id="tu"></h1>
 <h3>Hello World</h3>
 <p>你好，世界<br/>
 </p>
@@ -29,8 +35,5 @@ table{width:100%;height:100%;border:0;}
 </td>
 </tr>
 </table>
-<script>
-setInterval("show_time0.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);  
-</script>
 </body>
 </html>

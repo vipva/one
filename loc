@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hostloc 论坛签到</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script type="text/javascript">
+  function load(i) {
+    var img = new Image();
+
+    img.onerror = function() {
+      img.onerror = null;
+      if (i < 10) load(i + 1);
+      else {
+        alert('签到完毕');
+        window.location.href="/"
+      }
+      document.querySelector('#j_count').innerHTML = (i + 1) * 10 + ' %'
+
+    };
+
+    setTimeout(function(){ img.src = "https://www.hostloc.com/space-uid-" + (2000 + i) + ".html"; }, 1000);
+  }
+
+  load(1);
+</script>
+<style type="text/css">
+    body{ text-align: center; padding-top:150px;}
+    h1{
+      font-size: 36px;
+      margin: 0 0 2rem 0;
+      color:#333;
+    }
+    div{
+      font-size: 15px;
+      color: #666;
+      margin: 1em 0;
+    }
+    #turnkey-credit{
+      display: none;
+    }
+</style>
+</head>
+<body>
+<h1>HOSTLOC 签到领积分</h1>
+<div>已经完成 <span id="j_count">0 %</span></div>
+</body>
+</html>
